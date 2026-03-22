@@ -1,0 +1,1 @@
+// document.onload(alert("Selamat datang di web Donasi Barang"))

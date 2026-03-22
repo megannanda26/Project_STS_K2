@@ -1,0 +1,45 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* header */
+header{
+    text-align: center;
+    padding: 20px;
+}
+
+.cta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.cta button{
+    width: 200px;
+    height: 50px;
+    background-color: yellow;
+    border-radius: 12px;
+    border: 2px solid rgb(200, 200, 89);
+    transition: all 0.3s ease-in;
+}
+
+.cta button:hover{
+    transform: scale(1.05);
+}
+
+
+/* header-end */
+
+/* main */
+/* main-end */
+
+/* footer */
+footer{
+    background-color: black;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+/* footer-end */
