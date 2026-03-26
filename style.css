@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+h2 {
+    font-size: 2em;
+}
+
 /* Nav */
 nav{
     background-color: black;
@@ -57,8 +61,10 @@ nav{
 /* header */
 header{
     text-align: center;
-    padding: 20px;
-    background-color: bisque;
+    padding: 100px 30px;
+    background-image: url(img/hero\ 1.jpg);
+    background-size: cover;
+    color: aliceblue;
 }
 
 .cta{
@@ -84,8 +90,84 @@ header{
 
 /* header-end */
 
-/* main */
-/* main-end */
+/* Testimoni */
+.testimoni {
+    background-color: orange;
+    padding: 2rem;
+}
+
+
+.testimoni-user {
+    text-align: center;
+    margin: 1em 0;
+    padding: 1em;
+    font-size: 2em;
+    background-color: yellow;
+    letter-spacing: 0.1em;
+    border-radius: 10px;
+}
+
+.testimoni-user span{
+    font-weight: bold;
+}
+
+.feedback{
+    margin: 1em 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.feedback-container{
+    border-radius: 10px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    padding: 2em;
+    width: 100%;
+    border: 2px solid blue;
+}
+
+.feedback-img{
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.feedback-img img{
+    width: 100%;
+}
+/* Testimoni-end */
+
+/* form */
+.form{
+    background-color: yellowgreen;
+    padding: 2em;
+}
+
+.form p{
+    text-align: center;
+}
+
+.form-button{
+    display: flex;
+    justify-content: center; 
+}
+
+#button{
+    margin: 1em;
+    padding: 1em;
+}
+
+#form-donasi{
+    display: hidden;
+}
+/* form-end */
 
 /* footer */
 footer{
