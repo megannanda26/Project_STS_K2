@@ -36,7 +36,7 @@ nav{
 .nav ul{
     font-size: 1.2em;
     letter-spacing: 5px;
-    margin-right: 3em;
+    margin-right: 6em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,9 +62,13 @@ nav{
 header{
     text-align: center;
     padding: 100px 30px;
+    height: 750px;
     background-image: url(img/hero\ 1.jpg);
-    background-size: cover;
+    background-size: contain;
     color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cta{
@@ -75,8 +79,8 @@ header{
 }
 
 .cta button{
-    width: 200px;
-    height: 50px;
+    width: 300px;
+    height: 75px;
     background-color: yellow;
     border-radius: 12px;
     border: 2px solid rgb(200, 200, 89);
@@ -89,6 +93,62 @@ header{
 
 
 /* header-end */
+
+/* guide */
+.guide{
+    background-color: greenyellow;
+    padding: 2em;
+}
+
+.guide-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.problem, .solution{
+    text-align: center;
+    padding: 2em;
+    background-color: white;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.problem h3, .solution h3{
+    margin: 1em;
+}
+
+.problem-card, .solution-card{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    margin: 1em;
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+.problem-img, .solution-img{
+    background-color: blue;
+    width: 80px;
+    padding: 1em;
+    border-radius: 50%;
+
+}
+
+.problem img, .solution img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.problem-text, .solution-text{
+    text-align: center;
+}
+
+
+/* guide-end */
 
 /* Testimoni */
 .testimoni {
@@ -159,15 +219,33 @@ header{
     justify-content: center; 
 }
 
-#button{
+#open{
     margin: 1em;
     padding: 1em;
+    border-radius: 10px;
 }
 
 #form-donasi{
-    display: hidden;
+    background-color: white;
+    padding: 2em;
+    text-align: center;
+    margin: 2em 0;
+    border-radius: 10px;
+}
+
+.form-body{
+    display: flex;
+    justify-content: center;
+    margin: 2em;
 }
 /* form-end */
+
+/* Galeri */
+.galeri{
+    background-color: orange;
+    padding: 2em;
+}
+/* Galeri-end */
 
 /* footer */
 footer{
