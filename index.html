@@ -14,8 +14,9 @@
             <div class="nav">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -23,133 +24,179 @@
             <div class="header text">
                 <h1>Donasi Barang Untuk Kita Semua</h1>
                 <div class="cta">
-                    <button><a href="#open">Ayo Donasi Sekarang</a></button>
+                    <button><h3><a href="#open">Ayo Donasi Sekarang</a></h3></button>
                 </div>
             </div>
         </header>
         <main>
-            <section class="guide">
-                <h2>Panduan / Guide</h2>
-                <div class="guide-container">
+            <section class="about" id="about">
                     <div class="problem">
-                        <h3>Mengapa Kamu Perlu Berdonasi?</h3>
-                        <div class="problem-card">
-                            <div class="problem-img">
-                                <Img src="img/WBasura.jpg">
+                        <h2>Mengapa Kamu Perlu Berdonasi di <span>DonasiHub?</span></h2>
+                        <div class="problem-container">
+                            <div class="problem-card">
+                                <div class="problem-img">
+                                    <Img src="img/WBasura.jpg">
+                                </div>
+                                <div class="problem-text">
+                                    <h3>Membantu Sesama</h3>
+                                    <p>Salurkan bantuan langsung ke tangan yang membutuhkan</p>
+                                </div>
                             </div>
-                            <div class="problem-text">
-                                <h3>Membantu Sesama</h3>
-                                <p>Bantu mereka yang membutuhkan</p>
+                            <div class="problem-card">
+                                <div class="problem-img">
+                                    <Img src="img/WBasura.jpg">
+                                </div>
+                                <div class="problem-text">
+                                    <h3>Mengurangi Limbah</h3>
+                                    <p>Kurangi sampah & jaga lingkungan dengan donasi barang bekas>
+                                </div>
                             </div>
-                        </div>
-                        <div class="problem-card">
-                            <div class="problem-img">
-                                <Img src="img/WBasura.jpg">
-                            </div>
-                            <div class="problem-text">
-                                <h3>Mengurangi Limbah</h3>
-                                <p>kurangi sampah & jaga lingkungan</p>
-                            </div>
-                        </div>
-                        <div class="problem-card">
-                            <div class="problem-img">
-                                <Img src="img/WBasura.jpg">
-                            </div>
-                            <div class="problem-text">
-                                <h3>Memberi Harapan Baru</h3>
-                                <p>Berikan kehidupan baru pada barang bekas</p>
-                            </div>
+                            <div class="problem-card">
+                                <div class="problem-img">
+                                    <Img src="img/WBasura.jpg">
+                                </div>
+                                <div class="problem-text">
+                                    <h3>Memberi Harapan Baru</h3>
+                                    <p>Berikan kehidupan baru pada barang bekas yang masih layak</p>
+                                </div>
                         </div>
                     </div>
                     <div class="solution">
-                        <h3>Solusi yang kami tawarkan</h3>
-                        <div class="solution-card">
-                            <div class="solution-img">
-                                <Img src="img/WBasura.jpg">
+                        <h2>Solusi yang <span>DonasiHub</span> Tawarkan </h2>
+                        <div class="solution-container">
+                            <div class="solution-card">
+                                <div class="solution-img">
+                                    <Img src="img/WBasura.jpg">
+                                </div>
+                                <div class="solution-text">
+                                    <h3>Penjemputan Gratis</h3>
+                                    <p>Kami jemput donasi anda</p>
+                                </div>
                             </div>
-                            <div class="solution-text">
-                                <h3>Penjemputan Gratis</h3>
-                                <p>Kami jemput donasi anda</p>
+                            <div class="solution-card">
+                                <div class="solution-img">
+                                    <Img src="img/WBasura.jpg">
+                                </div>
+                                <div class="solution-text">
+                                    <h3>Daur Ulang Barang</h3>
+                                    <p>Barang diolah ulang </p>
+                                </div>
                             </div>
+                            <div class="solution-card">
+                                <div class="solution-img">
+                                    <Img src="img/WBasura.jpg">
+                                </div>
+                                <div class="solution-text">
+                                    <h3>Distribusi Ke Penerima</h3>
+                                    <p>Salurkan kepada yang membutuhkan</p>
+                                </div>
+                            </div> 
                         </div>
-                        <div class="solution-card">
-                            <div class="solution-img">
-                                <Img src="img/WBasura.jpg">
-                            </div>
-                            <div class="solution-text">
-                                <h3>Daur Ulang Barang</h3>
-                                <p>Barang diolah ulang </p>
-                            </div>
-                        </div>
-                        <div class="solution-card">
-                            <div class="solution-img">
-                                <Img src="img/WBasura.jpg">
-                            </div>
-                            <div class="solution-text">
-                                <h3>Distribusi Ke Penerima</h3>
-                                <p>Salurkan kepada yang membutuhkan</p>
-                            </div>
-                        </div> 
+                    </div>
+            </section>
+            <section class="form" id="services">
+                <h2>Form Donasi</h2>
+                <p>Klik tombol dibawah untuk donasi</p>
+                <div class="form-button">
+                    <button id="open">DONASI BARANG</button>
+                </div>
+                <div id="form-donasi" hidden>
+                    <h2>SILAHKAN ISI DATA DIRI </h2>
+                    <div class="form-body">
+                        <input>
+                        <input type="submit">
+                        <button id="close">X</button>
                     </div>
                 </div>
             </section>
-            <section class="testimoni">
-            <h2>Testimoni</h2>
-            <div class="testimoni-user">
-                <p><span>200+</span> Donatur <span>400+</span> Barang</p>
-            </div>
-            <div class="feedback">
-                <div class="feedback-container">
-                    <div class="feedback-img">
-                        <img src="img/WBasura.jpg">
-                    </div>
-                    <div class="feedback-user">
-                        <p>User = agus</p>
-                        <p>email = agus@gmail.com</p>
-                        <p>pesan = Saya mendonasikan mainan</p>
-                        <p>rating = 5/5</p>
-                    </div>
-                </div>
-                <div class="feedback-container">
-                    <div class="feedback-img">
-                        <img src="img/WBasura.jpg">
-                    </div>
-                    <div class="feedback-user">
-                        <p>user = ucup</p>
-                        <p>email = ucup@gmail.com</p>
-                        <p>rating = 4/5</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="form">
-            <h2>Form Donasi</h2>
-            <p>Klik tombol dibawah untuk donasi</p>
-            <div class="form-button">
-                <button id="open">DONASI BARANG</button>
-            </div>
-            <div id="form-donasi" >
-                <h2>SILAHKAN ISI DATA DIRI </h2>
-                <div class="form-body">
-                    <input>
-                    <input type="submit">
-                    <button id="close">X</button>
-                </div>
-            </div>
-            <div class="riwayat">
+            <section class="riwayat">
                 <h2>Riwayat Donasi</h2>
+            </section>
+        </main>
+        <footer>
+            <h2>Kontak Admin</h2>
+            <div class="contact" id="contact">
+                <div class="contact-container">
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/whatsap.png">
+                        </div>
+                        <p><a>WhatsApp</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/instagram.png">
+                        </div>
+                        <p><a>Instagram</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/linkedin.png"> 
+                        </div>
+                        <p><a>Linkedin</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/github.png">
+                        </div>
+                        <p><a>GitHub</a></p>
+                    </div>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/whatsap.png">
+                        </div>
+                        <p><a>WhatsApp</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/instagram.png">
+                        </div>
+                        <p><a>Instagram</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/linkedin.png">
+                        </div>
+                        <p><a>Linkedin</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/github.png">
+                        </div>
+                        <p><a>GitHub</a></p>
+                    </div>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/whatsap.png">
+                        </div>
+                        <p><a>WhatsApp</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/instagram.png">
+                        </div>
+                        <p><a>Instagram</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/linkedin.png">
+                        </div>
+                        <p><a>Linkedin</a></p>
+                    </div>
+                    <div class="contact-box">
+                        <div class="contact-img">
+                            <img src="img/github.png">
+                        </div>
+                        <p><a>GitHub</a></p>
+                    </div>
+                </div>
             </div>
-        </section>
-        <section class="galeri">
-            <h2>Galeri</h2>
-        </section>
-    </main>
-    <footer>
-        <div class="contact">
-            contact
-        </div>
-        <p>&copy by Ahmad Adjie Megananda | Ikram Abdul Hafizh | M. Aldi Pratama Putra</p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+            <p>&copy 2026 by Ahmad Adjie Megananda | Ikram Abdul Hafizh | M. Aldi Pratama Putra</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
