@@ -1,5 +1,6 @@
+
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 }
 
@@ -231,12 +232,100 @@ header{
     text-align: center;
     margin: 2em 0;
     border-radius: 10px;
+      position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 10;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    opacity: 0;
+    transform: translate(-50%, -60%) scale(0.9);
+    transition: all 0.3s ease;
 }
+#form-donasi.show{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+#close:hover{
+    background: darkred;
+    transform: scale(1.1);
+}
+
 
 .form-body{
     display: flex;
     justify-content: center;
     margin: 2em;
+      flex-direction: column;
+    gap: 10px;
+}
+.form-body input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+#list-donasi{
+    margin-top: 20px;
+}
+.card-donasi{
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    text-align: left; 
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.6;
+
+    position: relative;
+    padding-bottom: 40px;
+}
+.card-donasi p{
+    margin: 3px 0;
+    text-align: left;
+}
+
+.card-donasi .hapus{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    background: #dc3545; /* merah keren */
+    color: white;
+    border: none; /* hilangin border hitam */
+
+    padding: 6px 12px;
+    border-radius: 6px; /* kotak agak halus */
+
+    cursor: pointer;
+    font-size: 14px;
+}
+.card-donasi .hapus:hover{
+    background: #c82333;
 }
 /* form-end */
 
