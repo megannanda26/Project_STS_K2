@@ -30,3 +30,43 @@ setInterval(changeHero, 2000)
 
 changeHero()
 
+let submit = document.getElementById("form-submit")
+let list = document.getElementById("list-donasi")
+
+submit.addEventListener("click", function(){
+    let nama = document.getElementById("nama").value
+    let barang = document.getElementById("barang").value
+    let jumlah = document.getElementById("jumlah").value
+    let alamat = document.getElementById("alamat").value
+
+    if(nama === "" || barang === "" || jumlah === "" || alamat === ""){
+        alert("Isi semua data!")
+        return
+    }
+
+    let div = document.createElement("div")
+    div.classList.add("card-donasi")
+
+    div.innerHTML = `
+        <p>Nama: ${nama}</p>
+        <p>Barang: ${barang}</p>
+        <p>Jumlah: ${jumlah}</p>
+        <p>Alamat: ${alamat}</p>
+        <button class="hapus">Delete</button>
+    `
+
+    list.appendChild(div)
+
+    div.querySelector(".hapus").addEventListener("click", function(){
+        div.remove()
+    })
+
+    // auto close
+    form.style.display = "none"
+
+    // reset
+    document.getElementById("nama").value = ""
+    document.getElementById("barang").value = ""
+    document.getElementById("jumlah").value = ""
+    document.getElementById("alamat").value = ""
+})
