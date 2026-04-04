@@ -128,16 +128,21 @@
             <div class="form-button">
                 <button id="open">DONASI BARANG</button>
             </div>
-            <div id="form-donasi" >
+            <div id="form-donasi" hidden>
                 <h2>SILAHKAN ISI DATA DIRI </h2>
                 <div class="form-body">
-                    <input>
-                    <input type="submit">
+                    <input type="text" id="nama" placeholder="Nama">
+                    <input type="text" id="barang" placeholder="Barang Donasi">
+                    <input type="number" id="jumlah" placeholder="Jumlah">
+                    <input type="text" id="alamat" placeholder="Alamat">
+
+                    <button id="submit">Submit</button>
                     <button id="close">X</button>
                 </div>
             </div>
             <div class="riwayat">
                 <h2>Riwayat Donasi</h2>
+                <div id="list-donasi"></div>
             </div>
         </section>
         <section class="galeri">
