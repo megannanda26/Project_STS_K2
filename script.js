@@ -1,14 +1,18 @@
 // document.onload(alert("Selamat datang di web Donasi Barang"))
-let form = document.getElementById("form-donasi")
-let open = document.getElementById("open")
+
+// form-donasi
+let form = document.getElementById("form")
+let open = document.getElementById("open-form")
 open.addEventListener("click", function() {
-    form.removeAttribute("hidden")
+    form.style.display = "block"
 } )
-let close = document.getElementById("close")
+
+let close = document.getElementById("close-form") 
 close.addEventListener("click", function() {
-    form.setAttribute("hidden", true)
+    form.style.display = "none"
 })
 
+// hero/header
 const hero = [
     "img/hero1.jpg",
     "img/hero2.jpg",
@@ -25,3 +29,4 @@ function changeHero() {
 setInterval(changeHero, 2000)
 
 changeHero()
+

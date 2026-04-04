@@ -166,6 +166,7 @@ header{
     background-color: #FFD700;
     margin: 2em;
     border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);;
     transition: all 0.5s ease;
 }
 
@@ -187,39 +188,70 @@ header{
 
 
 /* form */
-.form{
+.service{
     padding: 3em 0;
-}
-
-.form{
     text-align: center;
 }
+
+.service p {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
 
 .form-button{
     display: flex;
     justify-content: center; 
 }
 
-#open{
+#open-form{
     margin: 1em;
     padding: 1em;
     border-radius: 10px;
 }
+/* form-end */
 
-#form-donasi{
-    background-color: white;
-    padding: 2em;
-    text-align: center;
-    margin: 2em 0;
-    border-radius: 10px;
+/* form-donasi */
+#form{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    z-index: 9000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
-.form-body{
+.close-form{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    cursor: pointer;
+}
+
+.close-form:
+
+.close-form img{
+    width: 100%;
+}
+
+.form-content{
+    position: relative;
+    margin: 5% auto;
     display: flex;
     justify-content: center;
-    margin: 2em;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: white;
+    height: 800px;
+    width: 70%;
 }
-/* form-end */
+
+/* fprm-donasi */
 
 /* riwayat */
 .riwayat{

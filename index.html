@@ -24,7 +24,7 @@
             <div class="header text">
                 <h1>Donasi Barang Untuk Kita Semua</h1>
                 <div class="cta">
-                    <button><h3><a href="#open">Ayo Donasi Sekarang</a></h3></button>
+                    <button><h3><a href="#open-form">Ayo Donasi Sekarang</a></h3></button>
                 </div>
             </div>
         </header>
@@ -94,20 +94,28 @@
                         </div>
                     </div>
             </section>
-            <section class="form" id="services">
+            <section class="service" id="services">
                 <h2>Form Donasi</h2>
                 <p>Klik tombol dibawah untuk donasi</p>
                 <div class="form-button">
-                    <button id="open">DONASI BARANG</button>
+                    <button id="open-form">DONASI BARANG</button>
                 </div>
-                <div id="form-donasi" hidden>
-                    <h2>SILAHKAN ISI DATA DIRI </h2>
-                    <div class="form-body">
-                        <input>
-                        <input type="submit">
-                        <button id="close">X</button>
+
+                <form id="form" >
+                    <div class="form-content">
+                        <div class="close-form">
+                            <img src="img/close.png">
+                        </div>
+                        <div class="form-header">
+                            <h2>SILAHKAN ISI DATA DIRI</h2>
+                        </div>
+                        <div class="form-body">
+                            <input>
+                            <input type="submit" id="form-submit">
+                            <button id="close-form">X</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </section>
             <section class="riwayat">
                 <h2>Riwayat Donasi</h2>
