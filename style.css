@@ -1,3 +1,4 @@
+
 *{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -147,8 +148,6 @@ header{
     background-color: #f7f2e4;
 }
 
-.solution{
-}
 
 .problem-container, .solution-container{
     display: flex;
@@ -251,6 +250,29 @@ header{
 }
 
 /* fprm-donasi */
+.card-donasi{
+    background: white;
+    padding: 15px;
+    margin: 15px auto;
+    border-radius: 10px;
+    width: 80%;
+    text-align: left;
+    position: relative;
+}
+
+.card-donasi .hapus{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+    background: #dc3545;
+    color: white;
+    border: none;
+
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
 
 /* riwayat */
 .riwayat{
