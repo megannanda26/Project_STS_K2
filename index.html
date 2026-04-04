@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="problem-text">
                                     <h3>Mengurangi Limbah</h3>
-                                    <p>Kurangi sampah & jaga lingkungan dengan donasi barang bekas>
+                                    <p>Kurangi sampah & jaga lingkungan dengan donasi barang bekas</p>
                                 </div>
                             </div>
                             <div class="problem-card">
@@ -110,15 +110,20 @@
                             <h2>SILAHKAN ISI DATA DIRI</h2>
                         </div>
                         <div class="form-body">
-                            <input>
-                            <input type="submit" id="form-submit">
-                            <button id="close-form">X</button>
+                            <input type="text" id="nama" placeholder="Nama">
+                            <input type="text" id="barang" placeholder="Barang Donasi">
+                            <input type="number" id="jumlah" placeholder="Jumlah">
+                            <input type="text" id="alamat" placeholder="Alamat">
+
+                            <button type="button" id="form-submit">Submit</button>
+                            <button type="button" id="close-form">X</button>
                         </div>
                     </div>
                 </form>
             </section>
             <section class="riwayat">
                 <h2>Riwayat Donasi</h2>
+                <div id="list-donasi"></div>
             </section>
         </main>
         <footer>
