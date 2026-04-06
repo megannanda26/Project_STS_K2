@@ -93,7 +93,7 @@ header{
     height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: blue;
+    background-color: white;
     background-position: center;
     color: aliceblue;
     display: flex;
@@ -312,7 +312,7 @@ body.no-scroll {
 
 .card-donasi{
     background: white;
-    padding: 15px;
+    padding: 3em;
     padding-left: 30px;
     margin: 15px auto;
     border-radius: 10px;

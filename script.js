@@ -46,6 +46,11 @@ let list = document.getElementById("list-donasi")
 let dataDonasi = []
 let editId = null
 
+let today = new Date()
+let date = today.getDate()
+let month = today.getMonth() + 1
+let year = today.getFullYear()
+
 function loadData() {
     const load = localStorage.getItem("donasiHubData")
     if (load) {
@@ -101,7 +106,8 @@ function renderData() {
             <p><strong>Email</strong>: ${donasi.email}</p>
             <p><strong>Jenis Barang</strong>: ${donasi.jenis}</p>
             <p><strong>Jumlah</strong>: ${donasi.jumlah}</p>
-            <p><strong>Alamat</strong>: ${donasi.alamat}</p><br>
+            <p><strong>Alamat</strong>: ${donasi.alamat}</p>
+            <p><strong>Tanggal</strong>: ${donasi.date}</p><br>
             <button class="edit">Edit</button>
             <button class="hapus">Delete</button>
         `
@@ -118,7 +124,7 @@ function renderData() {
 }
 
 submit.addEventListener("click", function(){
-    let nama = document.getElementById("nama").value
+    let nama = document.getElementById("nama").value.toUpperCase()
     let email = document.getElementById("email").value
     let jenis = document.getElementById("jenis").value
     let jumlah = document.getElementById("jumlah").value
@@ -143,14 +149,15 @@ submit.addEventListener("click", function(){
         }
         editId = null
     } else {
-        let newId = Date.now()
+        let newId = Math.floor(Math.random() * (1999 - 1000 + 1)) + 1000
         let newDonation = {
             id: newId,
             nama: nama,
             email: email,
             jenis: jenis,
             jumlah: parseInt(jumlah),
-            alamat: alamat
+            alamat: alamat,
+            date: date + "/" + month + "/" + year
         }
         dataDonasi.push(newDonation)
     }
