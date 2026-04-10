@@ -43,13 +43,14 @@ function enableScroll() {
 
 let submit = document.getElementById("form-submit")
 let list = document.getElementById("list-donasi")
+
+// CRUD
 let dataDonasi = []
 let editId = null
 
-let today = new Date()
-let date = today.getDate()
-let month = today.getMonth() + 1
-let year = today.getFullYear()
+function saveData() {
+    localStorage.setItem("donasiHubData", JSON.stringify(dataDonasi))
+} 
 
 function loadData() {
     const load = localStorage.getItem("donasiHubData")
@@ -59,37 +60,8 @@ function loadData() {
         saveData()
     }
     renderData()
-}   
-
-function saveData() {
-    localStorage.setItem("donasiHubData", JSON.stringify(dataDonasi))
 } 
 
-function hapusDonasi(id) {
-    if(confirm("Yakin ingin menghapus donasi ini?")) {
-        dataDonasi = dataDonasi.filter(donasi => donasi.id !== id)
-        saveData()
-        renderData()
-    }
-}
-
-function editDonasi(id) {
-    const donasi = dataDonasi.find(d => d.id === id)
-    if(donasi) {
-        document.getElementById("nama").value = donasi.nama
-        document.getElementById("email").value = donasi.email
-        document.getElementById("jenis").value = donasi.jenis
-        document.getElementById("jumlah").value = donasi.jumlah
-        document.getElementById("alamat").value = donasi.alamat
-        
-        editId = id
-        form.style.display = "block"
-        submit.textContent = "Update Donasi"
-        noScroll()
-    }
-}
-
-// Render data
 function renderData() {
     if(dataDonasi.length === 0) {
         list.innerHTML = "<p style='text-align:center; padding:20px;'>Belum ada donasi. Yuk donasi sekarang!</p>"
@@ -130,6 +102,11 @@ submit.addEventListener("click", function(){
     let jumlah = document.getElementById("jumlah").value
     let alamat = document.getElementById("alamat").value
 
+    let today = new Date()
+    let date = today.getDate()
+    let month = today.getMonth() + 1
+    let year = today.getFullYear()
+
     if(nama === "" || email === "" || jenis === "" || jumlah === "" || alamat === ""){
         alert("Isi semua data!")
         return
@@ -149,6 +126,7 @@ submit.addEventListener("click", function(){
         }
         editId = null
     } else {
+
         let newId = Math.floor(Math.random() * (1999 - 1000 + 1)) + 1000
         let newDonation = {
             id: newId,
@@ -161,11 +139,10 @@ submit.addEventListener("click", function(){
         }
         dataDonasi.push(newDonation)
     }
-    // auto close
+
     form.style.display = "none"
     enableScroll()
     
-    // reset
     document.getElementById("nama").value = ""
     document.getElementById("email").value = ""
     document.getElementById("jenis").value = ""
@@ -176,5 +153,31 @@ submit.addEventListener("click", function(){
     renderData()
     return true
 })
+
+
+function hapusDonasi(id) {
+    if(confirm("Yakin ingin menghapus donasi ini?")) {
+        dataDonasi = dataDonasi.filter(donasi => donasi.id !== id)
+        saveData()
+        renderData()
+    }
+}
+
+function editDonasi(id) {
+    const donasi = dataDonasi.find(d => d.id === id)
+    if(donasi) {
+        document.getElementById("nama").value = donasi.nama
+        document.getElementById("email").value = donasi.email
+        document.getElementById("jenis").value = donasi.jenis
+        document.getElementById("jumlah").value = donasi.jumlah
+        document.getElementById("alamat").value = donasi.alamat
+        
+        editId = id
+        form.style.display = "block"
+        submit.textContent = "Update Donasi"
+        noScroll()
+    }
+}
+
 
 loadData()
